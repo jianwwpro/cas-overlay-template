@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: cas-server-webapp-resources
+Implementation-Title: cas-server-webapp-resources
+Implementation-Vendor: org.apereo.cas
+Created-By: org.apereo.cas
+Implementation-Date: 2020-06-29T23:40:21.212281300-07:00[America/Phoenix
+ ]
+Specification-Version: 461b3b0c421cee6ae6863b3e01f5bc34c748eae9
+Implementation-Version: 6.2.0
+

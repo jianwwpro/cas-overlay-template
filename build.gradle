@@ -1,5 +1,7 @@
 buildscript {
     repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenLocal()
         gradlePluginPortal()
         mavenCentral()
@@ -27,6 +29,8 @@ buildscript {
 }
 
 repositories {
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
     mavenLocal()
     mavenCentral()
     jcenter()
@@ -72,6 +76,11 @@ apply from: rootProject.file("gradle/dockerjib.gradle")
 dependencies {
     // Other CAS dependencies/modules may be listed here...
     // implementation "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"
+    implementation "org.apereo.cas:cas-server-support-jdbc-drivers:${project.'cas.version'}"
+    implementation "org.apereo.cas:cas-server-support-jdbc:${project.'cas.version'}"
+//    implementation "mysql:mysql-connector-java:8.0.16"
+
+
 }
 
 tasks.findByName("jibDockerBuild")

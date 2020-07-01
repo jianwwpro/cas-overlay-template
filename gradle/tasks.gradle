@@ -10,6 +10,8 @@ import static org.gradle.internal.logging.text.StyledTextOutput.Style
 
 buildscript {
     repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenLocal()
         mavenCentral()
         jcenter()
@@ -23,7 +25,9 @@ buildscript {
         classpath "org.apache.ivy:ivy:${project.ivyVersion}"
         classpath "org.apereo.cas:cas-server-core-api-configuration-model:${project.'cas.version'}"
         classpath "org.apereo.cas:cas-server-core-configuration-metadata-repository:${project.'cas.version'}"
+
     }
+
 }
 
 apply plugin: "de.undercouch.download"
