@@ -8,6 +8,8 @@ import static org.gradle.internal.logging.text.StyledTextOutput.Style;
 
 buildscript {
     repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenLocal()
         mavenCentral()
         jcenter()

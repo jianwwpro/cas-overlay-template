@@ -1,5 +1,7 @@
 buildscript {
     repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenLocal()
         mavenCentral()
         jcenter()
@@ -8,14 +10,23 @@ buildscript {
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
+//        classpath "org.apereo.cas:cas-server-support-jpa-service-registry:${project.'cas.version'}"
+
+        classpath "org.apereo.cas:cas-server-support-jdbc:${project.'cas.version'}"
+//        classpath "org.apereo.cas:cas-server-support-jdbc-drivers:${project.'cas.version'}"
+    	classpath 'mysql:mysql-connector-java:5.1.34'
         classpath "de.undercouch:gradle-download-task:${project.gradleDownloadTaskVersion}"
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${project.springBootVersion}"
         classpath "gradle.plugin.com.google.cloud.tools:jib-gradle-plugin:${project.jibVersion}"
         classpath "io.freefair.gradle:maven-plugin:${project.gradleMavenPluginVersion}"
+        
+
     }
 }
 
 repositories {
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
     mavenLocal()
     mavenCentral()
     jcenter()
